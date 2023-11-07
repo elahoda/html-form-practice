@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information.</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <fieldset>
+            <legend>Enter your personal information</legend>
+            <label for="first-name">Enter your First Name:
+                <input name="first-name" id="first-name" type="text" required/>
+            </label>
+
+            <label for="last-name">Enter your Last Name:
+                <input name="last-name" id="last-name" type="text"required/>
+
+            </label>
+            <label for="email">Enter your Email: 
+                <input name="email" id="email" type="email" required/>
+
+            </label>
+            <label for="new-password">Create a new Password: 
+                <input name="new-password" id="new-password" type="password" required minlength=8 pattern=[a-z0-5]{8,}/>
+
+            </label>
+        </fieldset>
+
+        
+
+        <fieldset>
+            <legend>Choose your Membership Type</legend>
+            <label for="personal-account">
+                <input class="inline" name="personal-account" id="personal-account"  type="radio" name="account-type"/>
+                Personal Account
+            </label>
+            <label for="business-account">
+                <input class="inline" name="business-account" id="business-account"  type="radio" name="account-type"/>
+                Business Account
+            </label>
+            <label for="terms-and-conditions">
+                
+                <input class="inline" name="terms-and-conditions" id="terms-and-conditions" type="checkbox" required />
+                I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">Terms and Conditions</a>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Submit your Application</legend>
+            <label for="profile-picture">
+                Upload a profile picture:
+                <input name="profile-picture" id="profile-picture" type="file" accept="image/png, image/jpeg" required/>
+            </label>
+            <label for="age">
+                Input your age (years):
+                <input name="age" id="age" type="number" name="age" min="18" max="110" required/>
+            </label>
+            <label for="referrer">
+                How did you hear about us?
+                <select name="referrer" id="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">Real Estate News</option>
+                    <option value="2">Real Estate Youtube channel</option>
+                    <option value="3">Real Estate Forum</option>
+                    <option value="4">Other</option>  
+                </select>
+            </label>
+            <label for="bio" >
+                Tell us about yourself:
+                <textarea 
+                    id="bio" 
+                    rows="3" 
+                    cols="30"  
+                    name="bio" 
+                    placeholder="Enter a brief description of yourself"
+                required></textarea>
+                
+            </label>
+            
+        </fieldset>
+
+      <input type="submit" value="Submit">
+        
+    </form>
+</html>
